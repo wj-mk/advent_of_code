@@ -1,4 +1,4 @@
-"""Advent of Code 2021 Day 2 Dive, Problem 1"""
+"""Advent of Code 2021 Day 2 Dive, Problem 2"""
 
 # get data and process
 data = open("2_data.txt", "r")
@@ -12,6 +12,7 @@ data.close()
 
 horizontal = 0
 depth = 0
+aim = 0
 
 for movement in movements:
     
@@ -20,10 +21,12 @@ for movement in movements:
     
     if direction == 'forward':
         horizontal += magnitude
+        if aim != 0:
+            depth += aim * magnitude
     elif direction == 'down':
-        depth += magnitude
+        aim += magnitude
     elif direction == 'up':
-        depth -= magnitude
+        aim -= magnitude
 
 print(horizontal*depth)
-# Answer = 2039912
+# Answer = 
