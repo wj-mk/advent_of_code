@@ -12,4 +12,6 @@ for i, measure in enumerate(measurements):
     
 print(increases)
 
+# Answer returned is 1400
+
 data.close()
